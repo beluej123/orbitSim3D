@@ -170,7 +170,7 @@ def drawBodies(bodies, active_cam, draw_mode, pmcs_visible):
         camera_distance = (-b.get_draw_pos() - active_cam.get_pos()).mag()
         camera_physical_distance = camera_distance / visual_scaling_factor
 
-        if math.degrees(math.atan(b.get_radius()*2/camera_physical_distance)) < 0.85:
+        if math.degrees(math.atan(b.get_radius()*2/camera_physical_distance)) < 0.2: #0.85:
             glBegin(GL_POINTS)
             glVertex3f(0, 0, 0)
             glEnd()
